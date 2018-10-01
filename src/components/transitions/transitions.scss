@@ -1,0 +1,23 @@
+@import '../../scss/_reference';
+
+.fade {
+    opacity: 1;
+
+    &--enter-active,
+    &--leave-active {
+        opacity: 0;
+        transition: opacity $global-transition-duration $global-transition-smoothing;
+    }
+
+    &--leave-active {
+        opacity: 1;
+    }
+
+    &--enter-to {
+        opacity: 1;
+    }
+
+    &--leave-to {
+        opacity: 0;
+    }
+}

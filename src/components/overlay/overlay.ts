@@ -1,9 +1,7 @@
-import Vue from 'vue';
-import Component from 'vue-class-component';
-import { Emit, Prop } from 'vue-property-decorator';
+import { Component, Emit, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class BaseOverlay extends Vue
+export default class Overlay extends Vue
 {
     @Prop()
     public show!: boolean;

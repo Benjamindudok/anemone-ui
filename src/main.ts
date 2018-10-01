@@ -3,19 +3,21 @@ import Vue from 'vue';
 import Base from './components/base/base.vue';
 import HelloWorld from './components/hello-world/hello-world.vue';
 import Overlay from './components/overlay/overlay.vue';
+import Transitions from './components/transitions/transitions.vue';
 import { convertToSnakeCase } from './utils/stringUtils';
 import App from './views/app.vue';
 
 const components: any = {
     Base,
     HelloWorld,
-    Overlay
+    Overlay,
+    Transitions,
 };
 
 // automatically register all components
 Object.keys(components).forEach((name: string) =>
 {
-    Vue.component('aui-' + convertToSnakeCase(name), components[name]);
+    Vue.component('anemone-' + convertToSnakeCase(name), components[name]);
 });
 
 Vue.config.productionTip = false;
