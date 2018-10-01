@@ -4,6 +4,7 @@ import Base from './components/base/base.vue';
 import HelloWorld from './components/hello-world/hello-world.vue';
 import Overlay from './components/overlay/overlay.vue';
 import Transitions from './components/transitions/transitions.vue';
+
 import { convertToSnakeCase } from './utils/stringUtils';
 
 const components: any = {

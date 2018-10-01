@@ -1,0 +1,30 @@
+$primaryColor = #1b2632
+$secondaryColor = #14807e
+$tertiaryColor = #a3ce27
+$highlightColor = #be2633
+
+.sidebar {
+  background: $primaryColor;
+  color: #ffffff;
+  border: none ;
+  top: 0 ;
+  padding-top: 50px;
+  z-index: 1 ;
+}
+
+a.sidebar-link {
+  color: #fff ;
+
+  &.active {
+    color: $secondaryColor ;
+  }
+}
+
+.navbar {
+  background: linear-gradient(to right,$primaryColor 20rem, #ffffff 20rem);
+  border: none ;
+}
+
+.navbar .site-name {
+  color: #fff ;
+}
