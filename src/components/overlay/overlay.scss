@@ -1,0 +1,57 @@
+@import '../../scss/reference';
+
+.overlay {
+    background: $color-white;
+    display: block;
+    height: 100vh;
+    left: 0;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    @include respond-to(medium) {
+        display: flex;
+    }
+
+    &__content {
+        margin: auto;
+        padding: 50px 20px;
+
+        @include respond-to(medium) {
+            max-width: 80%;
+        }
+
+        @include respond-to(large) {
+            max-width: 75%;
+        }
+    }
+
+    &__close {
+        background: none;
+        border: none;
+        border-radius: 50%;
+        color: $color-primary;
+        cursor: pointer;
+        font-size: rem-calc(32px);
+        font-weight: $global-font-weight-bold;
+        height: 64px;
+        line-height: inherit;
+        padding-bottom: 5px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transition: $global-transition;
+        user-select: none;
+        width: 64px;
+
+        &:hover {
+            color: $color-secondary;
+        }
+
+        @include respond-to(medium) {
+            right: 10px;
+            top: 10px;
+        }
+    }
+}

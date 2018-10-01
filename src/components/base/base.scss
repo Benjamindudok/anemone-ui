@@ -1,0 +1,46 @@
+@import '~normalize.css/normalize.css';
+
+@import '../../scss/_reference';
+
+html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $color-text;
+    font-family: $global-font-family;
+    font-weight: $global-font-weight-normal;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $color-header;
+    font-family: $global-font-family-header;
+    font-weight: $global-font-weight-bold;
+}
+
+a {
+    color: $color-link;
+    text-decoration: none;
+    transition: $global-transition;
+
+    &:hover {
+        color: $color-link-hover;
+        text-decoration: underline;
+    }
+
+    &:visited {
+        color: $color-link-visited;
+
+        &:hover {
+            color: $color-link-visited-hover;
+        }
+    }
+
+    &:active, &:focus {
+        color: $color-link-active;
+
+        &:hover {
+            color: $color-link-active-hover;
+            text-decoration: underline;
+        }
+    }
+}

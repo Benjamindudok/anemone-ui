@@ -1,0 +1,55 @@
+@import './colors';
+
+//
+// Breakpoints
+$breakpoints: ('small': 0, 'medium': 640px, 'large': 1024px, 'xlarge': 1200px, 'xxlarge': 1440px) !default;
+
+//
+// Globals
+$global-background: $color-white !default;
+$global-font-size: 16px !default;
+$global-font-weight-light: 300 !default;
+$global-font-weight-normal: 400 !default;
+$global-font-weight-bold: 700 !default;
+$global-font-weight-thick: 900 !default;
+$global-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !default;
+$global-font-family-header: $global-font-family !default;
+$global-line-height: 1.5 !default;
+
+//
+// Global transitions defaults
+$global-transition-smoothing: cubic-bezier(.23, 1, .32, 1) !default;
+$global-transition-duration: .2s !default;
+$global-transition: all $global-transition-duration $global-transition-smoothing !default;
+
+//
+// Semantic color variables
+$color-primary: $color-pickled-bluewood !default;
+$color-primary-dark: darken($color-primary, 10%) !default;
+$color-primary-light: lighten($color-primary, 10%) !default;
+
+$color-secondary: $color-genoa !default;
+$color-secondary-dark: darken($color-secondary, 10%) !default;
+$color-secondary-light: lighten($color-secondary, 10%) !default;
+
+$color-success: $color-atlantis !default;
+$color-secondary-dark: darken($color-success, 10%) !default;
+$color-secondary-light: lighten($color-success, 10%) !default;
+
+$color-warning: $color-jaffa !default;
+$color-warning-dark: darken($color-warning, 10%) !default;
+$color-warning-light: lighten($color-warning, 10%) !default;
+
+$color-error: $color-tall-poppy !default;
+$color-error-dark: darken($color-error, 10%) !default;
+$color-error-light: lighten($color-error, 10%) !default;
+
+$color-text: $color-primary-dark !default;
+$color-header: $color-secondary !default;
+
+$color-link: $color-secondary !default;
+$color-link-hover: $color-success !default;
+$color-link-visited: $color-link !default;
+$color-link-visited-hover: $color-link-hover !default;
+$color-link-active: $color-error !default;
+$color-link-active-hover: $color-error !default;

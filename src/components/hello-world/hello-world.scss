@@ -1,0 +1,17 @@
+@import '../../scss/_reference';
+
+.hello-world {
+    &__heading {
+        margin: 40px 0 0;
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    &__item {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
