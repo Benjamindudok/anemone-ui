@@ -22,9 +22,9 @@ Object.keys(components).forEach((name: string) =>
 
 // export components individually,
 // incase users want to assign custom html tags
-export const base: Vue = components.Base;
-export const helloWorld: Vue = components.HelloWorld;
-export const overlay: Vue = components.Overlay;
-export const transitions: Vue = components.Transitions;
+export const AnemoneBase: Vue = components.Base;
+export const AnemoneHelloWorld: Vue = components.HelloWorld;
+export const AnemoneOverlay: Vue = components.Overlay;
+export const AnemoneTransitions: Vue = components.Transitions;
 
 export default components;
