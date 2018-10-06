@@ -65,11 +65,25 @@
     @return $result;
 }
 
+/// Remove the unit of a length
+/// @source https://css-tricks.com/snippets/sass/strip-unit-function/
+/// @access public
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
 /// Calculate REM value
 /// @source http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
 /// @access public
 /// @param {Size} $size - Size in px
 @function rem-calc($size) {
-    $remSize: $size / $global-font-size;
+    $remSize: strip-unit($size) /  strip-unit($global-font-size);
+
     @return #{$remSize}rem;
 }
