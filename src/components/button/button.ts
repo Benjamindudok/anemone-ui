@@ -1,7 +1,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class BaseButton extends Vue
+export default class Button extends Vue
 {
     @Prop()
     public variant!: string;

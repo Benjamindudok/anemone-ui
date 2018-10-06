@@ -1,18 +1,19 @@
 @import '../../scss/reference';
 
-.button {
+.badge {
+    display: inline-block;
     background: $color-silver-chalice;
     border: 2px solid $color-silver-chalice;
     border-radius: 3px;
     color: $color-text;
-    cursor: pointer;
-    display: inline-block;
+    cursor: default;
     font-size: rem-calc(14);
     line-height: rem-calc(16);
-    padding: 8px 12px;
+    margin: 0 15px 10px 0;
+    padding: 3px 5px;
     text-align: center;
 
-    $button: &;
+    $badge: &;
 
     &:hover {
         background-color: $color-cod-gray;
@@ -90,7 +91,7 @@
             color: $color-cod-gray;
         }
 
-        &#{$button}--primary {
+        &#{$badge}--primary {
             background-color: transparent;
             border-color: $color-primary;
             color: $color-white;
@@ -102,7 +103,7 @@
             }
         }
 
-        &#{$button}--secondary {
+        &#{$badge}--secondary {
             background-color: transparent;
             border-color: $color-secondary;
             color: $color-white;
@@ -114,7 +115,7 @@
             }
         }
 
-        &#{$button}--success {
+        &#{$badge}--success {
             background-color: transparent;
             border-color: $color-success;
             color: $color-white;
@@ -126,7 +127,7 @@
             }
         }
 
-        &#{$button}--warning {
+        &#{$badge}--warning {
             background-color: transparent;
             border-color: $color-warning;
             color: $color-white;
@@ -138,7 +139,7 @@
             }
         }
 
-        &#{$button}--error {
+        &#{$badge}--error {
             background-color: transparent;
             border-color: $color-error;
             color: $color-white;
@@ -149,76 +150,5 @@
                 color: $color-white;
             }
         }
-    }
-
-    &--text {
-        background: transparent;
-        border-color: transparent;
-
-        &:hover {
-            background: transparent;
-            border-color: transparent;
-        }
-
-        &#{$button}--primary {
-            background: transparent;
-            border-color: transparent;
-            color: $color-primary;
-
-            &:hover {
-                background: transparent;
-                border-color: transparent;
-                color: $color-primary-dark;
-            }
-        }
-
-        &#{$button}--secondary {
-            background: transparent;
-            border-color: transparent;
-            color: $color-secondary;
-
-            &:hover {
-                background: transparent;
-                border-color: transparent;
-                color: $color-secondary-dark;
-            }
-        }
-
-        &#{$button}--success {
-            background: transparent;
-            border-color: transparent;
-            color: $color-success;
-
-            &:hover {
-                background: transparent;
-                border-color: transparent;
-                color: $color-success-dark;
-            }
-        }
-
-        &#{$button}--warning {
-            background: transparent;
-            border-color: transparent;
-            color: $color-warning;
-
-            &:hover {
-                background: transparent;
-                border-color: transparent;
-                color: $color-warning-dark;
-            }
-        }
-
-        &#{$button}--error {
-            background: transparent;
-            border-color: transparent;
-            color: $color-error;
-
-            &:hover {
-                background: transparent;
-                border-color: transparent;
-                color: $color-error-dark;
-            }
-        }
-
     }
 }
