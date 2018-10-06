@@ -1,30 +1,39 @@
-import Vue from 'vue';
-
-import Base from './components/base/base.vue';
-import HelloWorld from './components/hello-world/hello-world.vue';
-import Overlay from './components/overlay/overlay.vue';
-import Transitions from './components/transitions/transitions.vue';
-
+import { VueConstructor } from 'vue';
 import { convertToSnakeCase } from './utils/stringUtils';
 
+import AnemoneBase from './components/base/base.vue';
+import AnemoneHelloWorld from './components/hello-world/hello-world.vue';
+import AnemoneOverlay from './components/overlay/overlay.vue';
+import AnemoneTransitions from './components/transitions/transitions.vue';
+
+// save reference to all components for later use
 const components: any = {
-    Base,
-    HelloWorld,
-    Overlay,
-    Transitions,
+    AnemoneBase,
+    AnemoneHelloWorld,
+    AnemoneOverlay,
+    AnemoneTransitions,
 };
 
-// automatically register all components
-Object.keys(components).forEach((name: string) =>
-{
-    Vue.component('anemone-' + convertToSnakeCase(name), components[name]);
-});
+export default class AnemoneUI {
+    public static install = (Vue: VueConstructor, options: any = {}) => {
+        // automatically register all components
+        Object.keys(components).forEach((name: string) =>
+        {
+            Vue.component(convertToSnakeCase(name), components[name]);
+        });
+    }
+}
 
 // export components individually,
 // incase users want to assign custom html tags
-export const AnemoneBase: Vue = components.Base;
-export const AnemoneHelloWorld: Vue = components.HelloWorld;
-export const AnemoneOverlay: Vue = components.Overlay;
-export const AnemoneTransitions: Vue = components.Transitions;
+export {
+    AnemoneBase,
+    AnemoneHelloWorld,
+    AnemoneOverlay,
+    AnemoneTransitions
+};
 
-export default components;
+// Install plugin automatically if loaded in the browser
+if (typeof window !== 'undefined' && !!(window as any).Vue) {
+    (window as any).Vue.use(AnemoneUI);
+}
