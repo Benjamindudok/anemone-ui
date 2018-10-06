@@ -2,6 +2,7 @@ import { VueConstructor } from 'vue';
 import { convertToSnakeCase } from './utils/stringUtils';
 
 import AnemoneBase from './components/base/base.vue';
+import AnemoneButton from './components/button/button.vue';
 import AnemoneHelloWorld from './components/hello-world/hello-world.vue';
 import AnemoneOverlay from './components/overlay/overlay.vue';
 import AnemoneTransitions from './components/transitions/transitions.vue';
@@ -9,6 +10,7 @@ import AnemoneTransitions from './components/transitions/transitions.vue';
 // save reference to all components for later use
 const components: any = {
     AnemoneBase,
+    AnemoneButton,
     AnemoneHelloWorld,
     AnemoneOverlay,
     AnemoneTransitions,
@@ -28,6 +30,7 @@ export default class AnemoneUI {
 // incase users want to assign custom html tags
 export {
     AnemoneBase,
+    AnemoneButton,
     AnemoneHelloWorld,
     AnemoneOverlay,
     AnemoneTransitions

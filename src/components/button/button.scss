@@ -1,0 +1,91 @@
+@import '../../scss/reference';
+
+.button {
+    background: $color-silver-chalice;
+    border: 2px solid $color-silver-chalice;
+    border-radius: 3px;
+    color: $color-text;
+    cursor: pointer;
+    display: inline-block;
+    font-size: rem-calc(14);
+    line-height: rem-calc(16);
+    padding: 8px 12px;
+    text-align: center;
+
+    &:hover {
+        background-color: $color-cod-gray;
+        border-color: $color-cod-gray;
+        color: $color-cod-gray;
+    }
+
+    &--primary {
+        background-color: $color-primary;
+        border-color: $color-primary;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-primary-dark;
+            border-color: $color-primary-dark;
+            color: $color-white;
+        }
+    }
+
+    &--secondary {
+        background-color: $color-secondary;
+        border-color: $color-secondary;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-secondary-dark;
+            border-color: $color-secondary-dark;
+            color: $color-white;
+        }
+    }
+
+    &--success {
+        background-color: $color-success;
+        border-color: $color-success;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-success-dark;
+            border-color: $color-success-dark;
+            color: $color-white;
+        }
+    }
+
+    &--warning {
+        background-color: $color-warning;
+        border-color: $color-warning;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-warning-dark;
+            border-color: $color-warning-dark;
+            color: $color-white;
+        }
+    }
+
+    &--error {
+        background-color: $color-error;
+        border-color: $color-error;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-error-dark;
+            border-color: $color-error-dark;
+            color: $color-white;
+        }
+    }
+
+    &--ghost {
+        background-color: transparent;
+        color: $color-silver-chalice;
+
+        &:hover {
+            background-color: transparent;
+            border-color: $color-cod-gray;
+            color: $color-cod-gray;
+        }
+    }
+}
