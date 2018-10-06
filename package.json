@@ -29,7 +29,7 @@
     ".stylelintrc",
     ".browserslistrc"
   ],
-  "main": "./dist/anemonui.common.js",
+  "main": "dist/anemone-ui.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name anemone-ui ./src/package.ts",
