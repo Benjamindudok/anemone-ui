@@ -21,7 +21,7 @@ export default class Pagination extends Vue
         {
             return {
                 'pagination__link': true,
-                'pagination__link--isCurrent': pageNumber == this.currentPage || (!this.currentPage && pageNumber == 1)
+                'pagination__link--isActive': pageNumber == this.currentPage || (!this.currentPage && pageNumber == 1)
             };
         };
     }

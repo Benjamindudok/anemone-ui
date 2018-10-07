@@ -20,25 +20,28 @@
     }
 
     &__link {
-        background: transparent;
-        border-radius: 5px;
-        border: 2px solid $color-primary;
-        color: $color-primary;
+        background: $pagination-default-background-color;
+        border: $pagination-default-border;
+        border-radius: $pagination-default-border-radius;
+        color: $pagination-default-color;
         cursor: pointer;
         display: block;
         padding: 5px 15px;
+        transition: $global-transition;
 
         &:hover, &:focus {
-            background: $color-primary;
-            color: $color-white;
+            background: $pagination-default-background-color-hover;
+            border: $pagination-default-border-hover;
+            color: $pagination-default-color-hover;
         }
 
-        &--isCurrent {
-            background: $color-primary;
-            color: $color-white;
+        &--isActive {
+            background: $pagination-default-background-color-active;
+            border: $pagination-default-border-active;
+            color: $pagination-default-color-active;
 
             &:hover, &:focus {
-                border-color: $color-secondary;
+                border-color: $pagination-default-color-hover;
             }
         }
     }

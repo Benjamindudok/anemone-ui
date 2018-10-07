@@ -86,18 +86,31 @@ $global-variants: (
 
 //
 // Badges
-$badge-default-background-color: $color-silver;
-$badge-default-border: 2px solid $color-silver;
-$badge-default-border-radius: 3px;
-$badge-default-color: $color-text;
-$badge-default-font-size: rem-calc(14px);
-$badge-default-line-height: rem-calc(16);
+$badge-default-background-color: $color-silver !default;
+$badge-default-border: 2px solid $color-silver !default;
+$badge-default-border-radius: 3px !default;
+$badge-default-color: $color-text !default;
+$badge-default-font-size: rem-calc(14px) !default;
+$badge-default-line-height: rem-calc(16) !default;
 
 //
 // Buttons
-$button-default-background-color: $color-silver;
-$button-default-border: 2px solid $color-silver;
-$button-default-border-radius: 3px;
-$button-default-color: $color-text;
-$button-default-font-size: rem-calc(14px);
-$button-default-line-height: rem-calc(16);
+$button-default-background-color: $color-silver !default;
+$button-default-border: 2px solid $color-silver !default;
+$button-default-border-radius: 3px !default;
+$button-default-color: $color-text !default;
+$button-default-font-size: rem-calc(14px) !default;
+$button-default-line-height: rem-calc(16) !default;
+
+//
+// Pagination
+$pagination-default-background-color: transparent !default;
+$pagination-default-background-color-hover: $color-primary !default;
+$pagination-default-background-color-active: $color-primary !default;
+$pagination-default-border: 2px solid $color-primary !default;
+$pagination-default-border-hover: 2px solid $color-primary !default;
+$pagination-default-border-active: 2px solid $color-primary !default;
+$pagination-default-border-radius: 5px !default;
+$pagination-default-color: $color-primary !default;
+$pagination-default-color-hover: $color-secondary !default;
+$pagination-default-color-active: $color-white !default;
