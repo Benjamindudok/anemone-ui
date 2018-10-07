@@ -6,6 +6,7 @@ import AnemoneBase from './components/base/base.vue';
 import AnemoneButton from './components/button/button.vue';
 import AnemoneHelloWorld from './components/hello-world/hello-world.vue';
 import AnemoneOverlay from './components/overlay/overlay.vue';
+import AnemonePagination from './components/pagination/pagination.vue';
 import AnemoneTransitions from './components/transitions/transitions.vue';
 
 // save reference to all components for later use
@@ -15,6 +16,7 @@ const components: any = {
     AnemoneButton,
     AnemoneHelloWorld,
     AnemoneOverlay,
+    AnemonePagination,
     AnemoneTransitions,
 };
 
@@ -36,6 +38,7 @@ export {
     AnemoneButton,
     AnemoneHelloWorld,
     AnemoneOverlay,
+    AnemonePagination,
     AnemoneTransitions
 };
 

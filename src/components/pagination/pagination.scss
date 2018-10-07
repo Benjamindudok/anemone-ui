@@ -1,0 +1,45 @@
+@import '../../scss/reference';
+
+.pagination {
+    list-style: none;
+    margin: 15px 0 30px;
+    padding: 0;
+    text-align: center;
+
+    &__item {
+        display: inline-block;
+        margin: 0 5px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        background: transparent;
+        border-radius: 5px;
+        border: 2px solid $color-primary;
+        color: $color-primary;
+        cursor: pointer;
+        display: block;
+        padding: 5px 15px;
+
+        &:hover, &:focus {
+            background: $color-primary;
+            color: $color-white;
+        }
+
+        &--isCurrent {
+            background: $color-primary;
+            color: $color-white;
+
+            &:hover, &:focus {
+                border-color: $color-secondary;
+            }
+        }
+    }
+}
