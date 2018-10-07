@@ -39,13 +39,19 @@ $color-link-active-hover: $color-error;
 //
 // Globals
 $global-background: $color-white;
+$global-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$global-font-family-header: $global-font-family;
+$global-font-scale-xxlarge: 4.236rem;
+$global-font-scale-xlarge: 2.618rem;
+$global-font-scale-large: 1.618rem;
+$global-font-scale-normal: 1rem;
+$global-font-scale-small: 0.618rem;
+$global-font-scale-tiny: 0.382rem;
 $global-font-size: 16px;
 $global-font-weight-light: 300;
 $global-font-weight-normal: 400;
 $global-font-weight-bold: 700;
 $global-font-weight-thick: 900;
-$global-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-$global-font-family-header: $global-font-family;
 $global-line-height: 1.5;
 
 //

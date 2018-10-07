@@ -8,13 +8,79 @@ html, body {
     color: $color-text;
     font-family: $global-font-family;
     font-weight: $global-font-weight-normal;
-    text-align: center;
+    line-height: 1.4;
+    text-align: left;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: $color-header;
     font-family: $global-font-family-header;
     font-weight: $global-font-weight-bold;
+    margin: 0 0 rem-calc(8);
+}
+
+h1 {
+    font-size: $global-font-scale-xxlarge * .5;
+    line-height: $global-font-scale-xxlarge * .75;
+
+    @include respond-to(medium) {
+        font-size: $global-font-scale-xxlarge * .75;
+        line-height: $global-font-scale-xxlarge * 1;
+    }
+
+    @include respond-to(large) {
+        font-size: $global-font-scale-xxlarge;
+        line-height: $global-font-scale-xxlarge * 1.25;
+    }
+}
+
+h2 {
+    font-size: $global-font-scale-xlarge;
+    line-height: $global-font-scale-xlarge * .75;
+
+    @include respond-to(medium) {
+        font-size: $global-font-scale-xlarge * .75;
+        line-height: $global-font-scale-xlarge * 1;
+    }
+
+    @include respond-to(large) {
+        font-size: $global-font-scale-xlarge;
+        line-height: $global-font-scale-xlarge * 1.25;
+    }
+}
+
+h3 {
+    font-size: $global-font-scale-large;
+    line-height: $global-font-scale-large * .75;
+
+    @include respond-to(medium) {
+        font-size: $global-font-scale-large * .75;
+        line-height: $global-font-scale-large * 1;
+    }
+
+    @include respond-to(large) {
+        font-size: $global-font-scale-large;
+        line-height: $global-font-scale-large * 1.25;
+    }
+}
+
+h4, h5 {
+    color: $color-text;
+    font-size: $global-font-scale-normal;
+    line-height: $global-font-scale-normal * 1.25;
+}
+
+h6 {
+    color: $color-text;
+    font-sie: $global-font-scale-small;
+    line-height: $global-font-scale-small * 1.25;
+}
+
+p {
+    font-size: inherit;
+    line-height: 1.6;
+    margin: 0 0 rem-calc(16);
+    text-rendering: optimizeLegibility;
 }
 
 a {
