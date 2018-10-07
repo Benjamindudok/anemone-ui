@@ -2,82 +2,43 @@
 
 .badge {
     display: inline-block;
-    background: $color-silver-chalice;
-    border: 2px solid $color-silver-chalice;
-    border-radius: 3px;
-    color: $color-text;
+    background: $badge-default-background-color;
+    border: $badge-default-border;
+    border-radius: $badge-default-border-radius;
+    color: $badge-default-color;
     cursor: default;
-    font-size: rem-calc(14);
-    line-height: rem-calc(16);
-    margin: 0 15px 10px 0;
-    padding: 3px 5px;
+    font-size: $badge-default-font-size;
+    line-height: $badge-default-line-height;
+    margin: 0 8px 8px 0;
+    padding: 3px 8px 5px;
     text-align: center;
+    transition: $global-transition;
 
     $badge: &;
 
-    &:hover {
-        background-color: $color-cod-gray;
-        border-color: $color-cod-gray;
-        color: $color-white;
-    }
-
-    &--primary {
-        background-color: $color-primary;
-        border-color: $color-primary;
-        color: $color-white;
+    &--isLink {
+        cursor: pointer;
 
         &:hover {
-            background-color: $color-primary-dark;
-            border-color: $color-primary-dark;
+            background-color: $color-cod-gray;
+            border-color: $color-cod-gray;
             color: $color-white;
         }
     }
 
-    &--secondary {
-        background-color: $color-secondary;
-        border-color: $color-secondary;
-        color: $color-white;
+    @each $type, $colors in $global-variants {
+        &--#{$type} {
+            background-color: map-get($colors, default);
+            border-color: map-get($colors, default);
+            color: map-get($colors, text);
 
-        &:hover {
-            background-color: $color-secondary-dark;
-            border-color: $color-secondary-dark;
-            color: $color-white;
-        }
-    }
-
-    &--success {
-        background-color: $color-success;
-        border-color: $color-success;
-        color: $color-white;
-
-        &:hover {
-            background-color: $color-success-dark;
-            border-color: $color-success-dark;
-            color: $color-white;
-        }
-    }
-
-    &--warning {
-        background-color: $color-warning;
-        border-color: $color-warning;
-        color: $color-white;
-
-        &:hover {
-            background-color: $color-warning-dark;
-            border-color: $color-warning-dark;
-            color: $color-white;
-        }
-    }
-
-    &--error {
-        background-color: $color-error;
-        border-color: $color-error;
-        color: $color-white;
-
-        &:hover {
-            background-color: $color-error-dark;
-            border-color: $color-error-dark;
-            color: $color-white;
+            &#{$badge}--isLink {
+                &:hover {
+                    background-color: map-get($colors, hover);
+                    border-color: map-get($colors, hover);
+                    color: map-get($colors, text);
+                }
+            }
         }
     }
 
@@ -91,63 +52,19 @@
             color: $color-cod-gray;
         }
 
-        &#{$badge}--primary {
-            background-color: transparent;
-            border-color: $color-primary;
-            color: $color-white;
-
-            &:hover {
+        @each $type, $colors in $global-variants {
+            &#{$badge}--#{$type} {
                 background-color: transparent;
-                border-color: $color-primary-dark;
-                color: $color-white;
-            }
-        }
+                border-color: map-get($colors, default);
+                color: map-get($colors, default);
 
-        &#{$badge}--secondary {
-            background-color: transparent;
-            border-color: $color-secondary;
-            color: $color-white;
-
-            &:hover {
-                background-color: transparent;
-                border-color: $color-secondary-dark;
-                color: $color-white;
-            }
-        }
-
-        &#{$badge}--success {
-            background-color: transparent;
-            border-color: $color-success;
-            color: $color-white;
-
-            &:hover {
-                background-color: transparent;
-                border-color: $color-success-dark;
-                color: $color-white;
-            }
-        }
-
-        &#{$badge}--warning {
-            background-color: transparent;
-            border-color: $color-warning;
-            color: $color-white;
-
-            &:hover {
-                background-color: transparent;
-                border-color: $color-warning-dark;
-                color: $color-white;
-            }
-        }
-
-        &#{$badge}--error {
-            background-color: transparent;
-            border-color: $color-error;
-            color: $color-white;
-
-            &:hover {
-                background-color: transparent;
-                border-color: $color-error-dark;
-                color: $color-white;
+                &#{$badge}--isLink {
+                    &:hover {
+                        background-color: transparent;
+                        border-color: map-get($colors, hover);
+                        color: map-get($colors, hover);
+                    }
+                }
             }
         }
     }

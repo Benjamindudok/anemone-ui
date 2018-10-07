@@ -1,5 +1,8 @@
 <template>
-    <span :class="badgeClasses">
+    <a :class="badgeClasses" :href="href" v-if="href">
+        <slot></slot>
+    </a>
+    <span :class="badgeClasses" v-else>
         <slot></slot>
     </span>
 </template>

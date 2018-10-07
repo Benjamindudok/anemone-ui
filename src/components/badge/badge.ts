@@ -7,6 +7,9 @@ export default class Badge extends Vue
     public variant!: string;
 
     @Prop()
+    public href!: string;
+
+    @Prop()
     public type!: string;
 
     private get badgeClasses(): any
@@ -14,6 +17,7 @@ export default class Badge extends Vue
         return {
             'badge': true,
             'badge--ghost': this.type === 'ghost',
+            'badge--isLink': this.href != null,
             ['badge--' + this.variant]: this.variant != null,
         };
     }

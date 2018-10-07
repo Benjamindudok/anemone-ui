@@ -1,16 +1,17 @@
 @import '../../scss/reference';
 
 .button {
-    background: $color-silver-chalice;
-    border: 2px solid $color-silver-chalice;
-    border-radius: 3px;
-    color: $color-text;
+    background: $button-default-background-color;
+    border: $button-default-border;
+    border-radius: $button-default-border-radius;
+    color: $button-default-color;
     cursor: pointer;
     display: inline-block;
-    font-size: rem-calc(14);
-    line-height: rem-calc(16);
-    padding: 8px 12px;
+    font-size: $button-default-font-size;
+    line-height: $button-default-line-height;
+    padding: 12px 20px;
     text-align: center;
+    transition: $global-transition;
 
     $button: &;
 
@@ -20,63 +21,17 @@
         color: $color-white;
     }
 
-    &--primary {
-        background-color: $color-primary;
-        border-color: $color-primary;
-        color: $color-white;
+    @each $type, $colors in $global-variants {
+        &--#{$type} {
+            background-color: map-get($colors, default);
+            border-color: map-get($colors, default);
+            color: map-get($colors, text);
 
-        &:hover {
-            background-color: $color-primary-dark;
-            border-color: $color-primary-dark;
-            color: $color-white;
-        }
-    }
-
-    &--secondary {
-        background-color: $color-secondary;
-        border-color: $color-secondary;
-        color: $color-white;
-
-        &:hover {
-            background-color: $color-secondary-dark;
-            border-color: $color-secondary-dark;
-            color: $color-white;
-        }
-    }
-
-    &--success {
-        background-color: $color-success;
-        border-color: $color-success;
-        color: $color-white;
-
-        &:hover {
-            background-color: $color-success-dark;
-            border-color: $color-success-dark;
-            color: $color-white;
-        }
-    }
-
-    &--warning {
-        background-color: $color-warning;
-        border-color: $color-warning;
-        color: $color-white;
-
-        &:hover {
-            background-color: $color-warning-dark;
-            border-color: $color-warning-dark;
-            color: $color-white;
-        }
-    }
-
-    &--error {
-        background-color: $color-error;
-        border-color: $color-error;
-        color: $color-white;
-
-        &:hover {
-            background-color: $color-error-dark;
-            border-color: $color-error-dark;
-            color: $color-white;
+            &:hover {
+                background-color: map-get($colors, hover);
+                border-color: map-get($colors, hover);
+                color: map-get($colors, text);
+            }
         }
     }
 
@@ -90,63 +45,17 @@
             color: $color-cod-gray;
         }
 
-        &#{$button}--primary {
-            background-color: transparent;
-            border-color: $color-primary;
-            color: $color-white;
-
-            &:hover {
+        @each $type, $colors in $global-variants {
+            &#{$button}--#{$type} {
                 background-color: transparent;
-                border-color: $color-primary-dark;
-                color: $color-white;
-            }
-        }
+                border-color: map-get($colors, default);
+                color: map-get($colors, default);
 
-        &#{$button}--secondary {
-            background-color: transparent;
-            border-color: $color-secondary;
-            color: $color-white;
-
-            &:hover {
-                background-color: transparent;
-                border-color: $color-secondary-dark;
-                color: $color-white;
-            }
-        }
-
-        &#{$button}--success {
-            background-color: transparent;
-            border-color: $color-success;
-            color: $color-white;
-
-            &:hover {
-                background-color: transparent;
-                border-color: $color-success-dark;
-                color: $color-white;
-            }
-        }
-
-        &#{$button}--warning {
-            background-color: transparent;
-            border-color: $color-warning;
-            color: $color-white;
-
-            &:hover {
-                background-color: transparent;
-                border-color: $color-warning-dark;
-                color: $color-white;
-            }
-        }
-
-        &#{$button}--error {
-            background-color: transparent;
-            border-color: $color-error;
-            color: $color-white;
-
-            &:hover {
-                background-color: transparent;
-                border-color: $color-error-dark;
-                color: $color-white;
+                &:hover {
+                    background-color: transparent;
+                    border-color: map-get($colors, hover);
+                    color: map-get($colors, hover);
+                }
             }
         }
     }
@@ -160,65 +69,18 @@
             border-color: transparent;
         }
 
-        &#{$button}--primary {
-            background: transparent;
-            border-color: transparent;
-            color: $color-primary;
-
-            &:hover {
+        @each $type, $colors in $global-variants {
+            &#{$button}--#{$type} {
                 background: transparent;
                 border-color: transparent;
-                color: $color-primary-dark;
+                color: map-get($colors, default);
+
+                &:hover {
+                    background: transparent;
+                    border-color: transparent;
+                    color: map-get($colors, hover);
+                }
             }
         }
-
-        &#{$button}--secondary {
-            background: transparent;
-            border-color: transparent;
-            color: $color-secondary;
-
-            &:hover {
-                background: transparent;
-                border-color: transparent;
-                color: $color-secondary-dark;
-            }
-        }
-
-        &#{$button}--success {
-            background: transparent;
-            border-color: transparent;
-            color: $color-success;
-
-            &:hover {
-                background: transparent;
-                border-color: transparent;
-                color: $color-success-dark;
-            }
-        }
-
-        &#{$button}--warning {
-            background: transparent;
-            border-color: transparent;
-            color: $color-warning;
-
-            &:hover {
-                background: transparent;
-                border-color: transparent;
-                color: $color-warning-dark;
-            }
-        }
-
-        &#{$button}--error {
-            background: transparent;
-            border-color: transparent;
-            color: $color-error;
-
-            &:hover {
-                background: transparent;
-                border-color: transparent;
-                color: $color-error-dark;
-            }
-        }
-
     }
 }
