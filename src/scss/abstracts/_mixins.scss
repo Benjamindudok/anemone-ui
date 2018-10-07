@@ -32,3 +32,11 @@
         @content;
     }
 }
+
+@mixin clear-float() {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
