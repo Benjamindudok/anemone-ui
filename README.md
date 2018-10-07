@@ -6,16 +6,27 @@ please don't expect it to be.
 ## Quick start
 There are multiple ways to install all the elements of this library. The easy 
 way is to just import the entire library, which automatically installs all 
-components as namespaced elements. For the vue components you can 
-just ``import 'anemone-ui';`` in your javascript entry file. Then also include
-the css by referencing it in the html or importing it into (for example) scss by
-```@import '~anemone-ui/dist/anemonui.css'```. 
+components as namespaced elements. 
+
+```javascript
+// First import the module
+import anemoneUI from 'anemone-ui';
+
+// then install in Vue
+Vue.use(anemoneUI);
+``` 
+
+Then also include the css by referencing it in the html or importing it into 
+(for example) scss by ```@import '~anemone-ui/dist/anemonui.css'```. 
 
 If you want to include individual components:
 
 ```javascript
-// in javascript
-import { AnemoneUIComponent } from 'anemone-ui';
+// import the relevant components
+import { AnemoneUIComponentName } from 'anemone-ui';
+
+// then register them under your own element name
+Vue.component('anemone-component-name', AnemoneUIComponentName);
 ```
 
 It's not yet possible to include individual component's 
