@@ -2,57 +2,57 @@
 
 //
 // Breakpoints
-$breakpoints: ('small': 0, 'medium': 640px, 'large': 1024px, 'xlarge': 1200px, 'xxlarge': 1440px) !default;
+$breakpoints: ('small': 0, 'medium': 640px, 'large': 1024px, 'xlarge': 1200px, 'xxlarge': 1440px);
 
 //
 // Semantic color variables
-$color-primary: $color-pickled-bluewood !default;
-$color-primary-dark: darken($color-primary, 10%) !default;
-$color-primary-light: lighten($color-primary, 10%) !default;
+$color-primary: $color-pickled-bluewood;
+$color-primary-dark: darken($color-primary, 10%);
+$color-primary-light: lighten($color-primary, 10%);
 
-$color-secondary: $color-genoa !default;
-$color-secondary-dark: darken($color-secondary, 10%) !default;
-$color-secondary-light: lighten($color-secondary, 10%) !default;
+$color-secondary: $color-genoa;
+$color-secondary-dark: darken($color-secondary, 10%);
+$color-secondary-light: lighten($color-secondary, 10%);
 
-$color-success: $color-atlantis !default;
-$color-success-dark: darken($color-success, 10%) !default;
-$color-success-light: lighten($color-success, 10%) !default;
+$color-success: $color-atlantis;
+$color-success-dark: darken($color-success, 10%);
+$color-success-light: lighten($color-success, 10%);
 
-$color-warning: $color-jaffa !default;
-$color-warning-dark: darken($color-warning, 10%) !default;
-$color-warning-light: lighten($color-warning, 10%) !default;
+$color-warning: $color-jaffa;
+$color-warning-dark: darken($color-warning, 10%);
+$color-warning-light: lighten($color-warning, 10%);
 
-$color-error: $color-tall-poppy !default;
-$color-error-dark: darken($color-error, 10%) !default;
-$color-error-light: lighten($color-error, 10%) !default;
+$color-error: $color-tall-poppy;
+$color-error-dark: darken($color-error, 10%);
+$color-error-light: lighten($color-error, 10%);
 
-$color-text: $color-primary-dark !default;
-$color-header: $color-secondary !default;
+$color-text: $color-primary-dark;
+$color-header: $color-secondary;
 
-$color-link: $color-secondary !default;
-$color-link-hover: $color-success !default;
-$color-link-visited: $color-link !default;
-$color-link-visited-hover: $color-link-hover !default;
-$color-link-active: $color-error !default;
-$color-link-active-hover: $color-error !default;
+$color-link: $color-secondary;
+$color-link-hover: $color-success;
+$color-link-visited: $color-link;
+$color-link-visited-hover: $color-link-hover;
+$color-link-active: $color-error;
+$color-link-active-hover: $color-error;
 
 //
 // Globals
-$global-background: $color-white !default;
-$global-font-size: 16px !default;
-$global-font-weight-light: 300 !default;
-$global-font-weight-normal: 400 !default;
-$global-font-weight-bold: 700 !default;
-$global-font-weight-thick: 900 !default;
-$global-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !default;
-$global-font-family-header: $global-font-family !default;
-$global-line-height: 1.5 !default;
+$global-background: $color-white;
+$global-font-size: 16px;
+$global-font-weight-light: 300;
+$global-font-weight-normal: 400;
+$global-font-weight-bold: 700;
+$global-font-weight-thick: 900;
+$global-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$global-font-family-header: $global-font-family;
+$global-line-height: 1.5;
 
 //
 // Global transitions defaults
-$global-transition-smoothing: cubic-bezier(.23, 1, .32, 1) !default;
-$global-transition-duration: .4s !default;
-$global-transition: all $global-transition-duration $global-transition-smoothing !default;
+$global-transition-smoothing: cubic-bezier(.23, 1, .32, 1);
+$global-transition-duration: .4s;
+$global-transition: all $global-transition-duration $global-transition-smoothing;
 
 //
 // Global variants
@@ -86,31 +86,31 @@ $global-variants: (
 
 //
 // Badges
-$badge-default-background-color: $color-silver !default;
-$badge-default-border: 2px solid $color-silver !default;
-$badge-default-border-radius: 3px !default;
-$badge-default-color: $color-text !default;
-$badge-default-font-size: rem-calc(14px) !default;
-$badge-default-line-height: rem-calc(16) !default;
+$badge-default-background-color: $color-silver;
+$badge-default-border: 2px solid $color-silver;
+$badge-default-border-radius: 3px;
+$badge-default-color: $color-text;
+$badge-default-font-size: rem-calc(14px);
+$badge-default-line-height: rem-calc(16px);
 
 //
 // Buttons
-$button-default-background-color: $color-silver !default;
-$button-default-border: 2px solid $color-silver !default;
-$button-default-border-radius: 3px !default;
-$button-default-color: $color-text !default;
-$button-default-font-size: rem-calc(14px) !default;
-$button-default-line-height: rem-calc(16) !default;
+$button-default-background-color: $color-silver;
+$button-default-border: 2px solid $color-silver;
+$button-default-border-radius: 3px;
+$button-default-color: $color-text;
+$button-default-font-size: rem-calc(14px);
+$button-default-line-height: rem-calc(16px);
 
 //
 // Pagination
-$pagination-default-background-color: transparent !default;
-$pagination-default-background-color-hover: $color-primary !default;
-$pagination-default-background-color-active: $color-primary !default;
-$pagination-default-border: 2px solid $color-primary !default;
-$pagination-default-border-hover: 2px solid $color-primary !default;
-$pagination-default-border-active: 2px solid $color-primary !default;
-$pagination-default-border-radius: 5px !default;
-$pagination-default-color: $color-primary !default;
-$pagination-default-color-hover: $color-secondary !default;
-$pagination-default-color-active: $color-white !default;
+$pagination-default-background-color: transparent;
+$pagination-default-background-color-hover: $color-primary;
+$pagination-default-background-color-active: $color-primary;
+$pagination-default-border: 2px solid $color-primary;
+$pagination-default-border-hover: 2px solid $color-primary;
+$pagination-default-border-active: 2px solid $color-primary;
+$pagination-default-border-radius: 5px;
+$pagination-default-color: $color-primary;
+$pagination-default-color-hover: $color-secondary;
+$pagination-default-color-active: $color-white;
