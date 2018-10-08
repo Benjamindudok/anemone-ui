@@ -1,3 +1,8 @@
+---
+prev: false
+next: false
+---
+
 # Introduction
 
 A library of scss and Vue.js 2.0 UI components and utility helpers. 
