@@ -5,8 +5,22 @@ module.exports = {
         sidebar: 'auto',
         displayAllHeaders: true,
         nav: [
-            { text: 'Home', link: '/' },
             { text: 'Github', link: 'https://github.com/Benjamindudok/anemone-ui' },
         ]
+    },
+    chainWebpack: config => {
+        config.module.rule('ts')
+            .test(/\.ts$/)
+            .use('ts-loader')
+            .loader('ts-loader')
+            .options({
+                transpileOnly: true,
+                appendTsSuffixTo: [
+                    '\\.vue$'
+                ],
+                happyPackMode: false
+            })
+            .end()
+
     }
-}
+};

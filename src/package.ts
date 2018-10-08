@@ -1,5 +1,5 @@
 import { VueConstructor } from 'vue';
-import { convertToSnakeCase } from './utils/stringUtils';
+import { convertToSnakeCase } from './utils/stringUtils.ts';
 
 import AnemoneBadge from './components/badge/badge.vue';
 import AnemoneBase from './components/base/base.vue';
