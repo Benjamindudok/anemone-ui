@@ -1,0 +1,5 @@
+*.css linguist-language=Vue
+*.scss linguist-language=Vue
+*.ts linguist-language=Vue
+
+docs/* linguist-vendored=true
